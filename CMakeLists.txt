@@ -48,10 +48,10 @@ set(GAME_SOURCE)
 set(GAME_HEADER)
 
 set(GAME_RES_FOLDER
-    "${CMAKE_CURRENT_SOURCE_DIR}/Resources"
+    "${CMAKE_CURRENT_SOURCE_DIR}/resources"
     )
 if(APPLE OR WINDOWS)
-    cocos_mark_multi_resources(common_res_files RES_TO "Resources" FOLDERS ${GAME_RES_FOLDER})
+    cocos_mark_multi_resources(common_res_files RES_TO "resources" FOLDERS ${GAME_RES_FOLDER})
 endif()
 
 # add cross-platforms source files and header files 
@@ -166,4 +166,4 @@ if(LINUX OR WINDOWS)
     cocos_copy_target_res(${APP_NAME} LINK_TO ${APP_RES_DIR} FOLDERS ${GAME_RES_FOLDER})
 endif()
 
-add_executable(internal_test internal/Test.cpp)
+#add_executable(internal_test internal/Test.cpp)

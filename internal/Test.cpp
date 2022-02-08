@@ -1,7 +1,9 @@
 
 #include "Test.h"
 #include "iostream"
-
-int main() {
-    std::cout << "Hello";
+namespace internal_test {
+    int main() {
+        std::cout << "Hello";
+        return 0;
+    }
 }

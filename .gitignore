@@ -42,7 +42,7 @@ mac-build/
 proj.ios_mac/mac/build
 proj.ios_mac/mac/cassadian.xcodeproj/
 proj.ios_mac/mac/engine/
-proj.ios_mac/mac/CMakeScripts/
+proj.ios_mac/mac/CMakeScripts/*
 
 # Ignore thumbnails created by windows
 Thumbs.db
