@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-cmake_minimum_required(VERSION 3.14)
-project(cassadian)
-
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
-set(CMAKE_CXX_STANDARD 14)
-
-add_executable(cassadian main.cpp)
-target_link_libraries(cassadian ${CONAN_LIBS})
-=======
 #/****************************************************************************
 # Copyright (c) 2013-2014 cocos2d-x.org
 # Copyright (c) 2015-2017 Chukong Technologies Inc.
@@ -169,4 +157,3 @@ if(LINUX OR WINDOWS)
     cocos_get_resource_path(APP_RES_DIR ${APP_NAME})
     cocos_copy_target_res(${APP_NAME} LINK_TO ${APP_RES_DIR} FOLDERS ${GAME_RES_FOLDER})
 endif()
->>>>>>> 3b2464b (init cocos2d)
