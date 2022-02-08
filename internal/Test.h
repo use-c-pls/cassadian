@@ -1,0 +1,9 @@
+
+#ifndef CASSADIAN_INTERNAL_TEST_H_
+#define CASSADIAN_INTERNAL_TEST_H_
+
+class Test {
+
+};
+
+#endif //CASSADIAN_INTERNAL_TEST_H_

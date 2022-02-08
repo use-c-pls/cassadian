@@ -56,13 +56,20 @@ endif()
 
 # add cross-platforms source files and header files 
 list(APPEND GAME_SOURCE
-     Classes/AppDelegate.cpp
-     Classes/HelloWorldScene.cpp
+        core/AppDelegate.cpp
+        core/HelloWorldScene.cpp
      )
 list(APPEND GAME_HEADER
-     Classes/AppDelegate.h
-     Classes/HelloWorldScene.h
+        core/AppDelegate.h
+        core/HelloWorldScene.h
      )
+# internal code
+list(APPEND GAME_SOURCE
+        internal/Test.cpp
+        )
+list(APPEND GAME_HEADER
+        internal/Test.h
+        )
 
 if(ANDROID)
     # change APP_NAME to the share library name for Android, it's value depend on AndroidManifest.xml
@@ -131,7 +138,8 @@ endif()
 
 target_link_libraries(${APP_NAME} cocos2d)
 target_include_directories(${APP_NAME}
-        PRIVATE Classes
+        PRIVATE core
+        PRIVATE internal
         PRIVATE ${COCOS2DX_ROOT_PATH}/cocos/audio/include/
 )
 
@@ -157,3 +165,5 @@ if(LINUX OR WINDOWS)
     cocos_get_resource_path(APP_RES_DIR ${APP_NAME})
     cocos_copy_target_res(${APP_NAME} LINK_TO ${APP_RES_DIR} FOLDERS ${GAME_RES_FOLDER})
 endif()
+
+add_executable(internal_test internal/Test.cpp)
